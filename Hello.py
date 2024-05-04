@@ -44,7 +44,7 @@ if name in name_to_info:
     st.write(f"スキル2: {info['スキル2']}")
     st.write(f"スキル3: {info['スキル3']}")
 else:
-    st.write("その名前に対応する情報は登録されていません。")
+    st.write("その名前のキャラクターはこのサイトには登録されていません")
 
 
 

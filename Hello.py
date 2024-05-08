@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Excelファイルからデータを読み込む
-excel_file = 'https://oitast-my.sharepoint.com/personal/omzh220247_st_oita-ed_jp/Documents/[アークナイツ表　キャラ.xlsx]Sheet1
-.xlsx'  # Excelファイルのパス
+excel_file = 'https://oitast-my.sharepoint.com/personal/omzh220247_st_oita-ed_jp/Documents/[アークナイツ表　キャラ.xlsx]Sheet1'  # Excelファイルのパス
 df = pd.read_excel(excel_file)
 
 # Streamlitアプリケーションのタイトル

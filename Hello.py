@@ -6,7 +6,7 @@ excel_file = 'https://oitast-my.sharepoint.com/personal/omzh220247_st_oita-ed_jp
 df = pd.read_excel(excel_file)
 
 # Streamlitアプリケーションのタイトル
-st.title('情報取得アプリ')
+st.title('アークナイツキャラクター検索サイト')
 
 # ユーザーから名前を入力
 name = st.text_input('名前を入力してください')

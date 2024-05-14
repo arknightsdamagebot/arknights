@@ -104,3 +104,8 @@ if name:
         st.write(f"スキル3: {info['スキル3'].values[0]}")
     else:
         st.write('その名前の情報は見つかりませんでした')
+
+
+
+file_obj = None
+df = pd.read_csv(file_obj)

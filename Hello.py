@@ -4,6 +4,8 @@ import pandas as pd
 # Excelファイルからデータを読み込む
 excel_file = 'https://d.docs.live.net/b47bda82cedbc7ec/ドキュメント/arknights.xlsx'  # Excelファイルのパス
 
+uploaded_file = st.file_uploader("https://d.docs.live.net/b47bda82cedbc7ec/ドキュメント/arknights.xlsx", type="xlsx")
+
 if uploaded_file:
     # エクセルデータを読み込む
     df = pd.read_excel(uploaded_file)

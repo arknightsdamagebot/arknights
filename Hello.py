@@ -18,7 +18,10 @@ if name:
         info = df[df['名前'] == name]  # 名前に対応する行を取得
         st.write(f'**{name}** さんの情報:')
         st.write(f"所属: {info['所属'].values[0]}")
+        st.write(f"職業: {info['職業'].values[0]}")
         st.write(f"職分: {info['職分'].values[0]}")
+        st.write(f"レアリティ: {info['レアリティ'].values[0]}")
+        st.write(f"公開求人: {info['公開求人'].values[0]}")
         st.write(f"素質1: {info['素質1'].values[0]}")
         st.write(f"素質2: {info['素質2'].values[0]}")
         st.write(f"スキル1: {info['スキル1'].values[0]}")

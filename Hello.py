@@ -16,7 +16,7 @@ if name:
     # 名前がExcelファイルに存在するかチェック
     if name in df['名前'].values:
         info = df[df['名前'] == name]  # 名前に対応する行を取得
-        st.write(f'**{name}** さんの情報:')
+        st.write(f'**{name}** の情報:')
         st.write(f"所属: {info['所属'].values[0]}")
         st.write(f"職業: {info['職業'].values[0]}")
         st.write(f"職分: {info['職分'].values[0]}")

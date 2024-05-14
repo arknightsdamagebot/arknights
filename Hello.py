@@ -80,12 +80,12 @@ if uploaded_file:
 # 名前に対応する情報を取得して表示
 uploaded_file = st.file_uploader("Upload an Excel file", type="xlsx")
 
+name = st.text_input("名前を入力してください")
+
 if uploaded_file:
     # Excelデータを読み込む
     df = pd.read_excel(uploaded_file)
 
-    # ユーザーから名前を入力
-    name = st.text_input("名前を入力してください")
 
     # 名前に一致するデータを抽出
     filtered_df = df[df['名前'] == name]

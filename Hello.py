@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-# Excelファイルからデータを読み込む
-excel_file = 'https://d.docs.live.net/b47bda82cedbc7ec/ドキュメント/arknights.xlsx'  # Excelファイルのパス
 
 uploaded_file = st.file_uploader("https://d.docs.live.net/b47bda82cedbc7ec/ドキュメント/arknights.xlsx", type="xlsx")
 
@@ -104,8 +102,3 @@ if name:
         st.write(f"スキル3: {info['スキル3'].values[0]}")
     else:
         st.write('その名前の情報は見つかりませんでした')
-
-
-
-file_obj = None
-df = pd.read_csv(file_obj)

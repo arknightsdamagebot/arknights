@@ -5,11 +5,12 @@ import pandas as pd
 excel_file = 'https://d.docs.live.net/b47bda82cedbc7ec/ドキュメント/arknights.xlsx'  # Excelファイルのパス
 
 uploaded_file = st.file_uploader("https://d.docs.live.net/b47bda82cedbc7ec/ドキュメント/arknights.xlsx", type="xlsx")
+
 df = pd.read_excel(uploaded_file)
 
 if uploaded_file:
     # エクセルデータを読み込む
-
+    df = pd.read_excel(uploaded_file)
 
     
     string_cols = df.select_dtypes(include=['名前']).columns

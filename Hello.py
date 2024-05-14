@@ -1,10 +1,9 @@
 import streamlit as st
 import pandas as pd
 
+st.title('アークナイツキャラクター検索サイト')
 
 uploaded_file = st.file_uploader("https://d.docs.live.net/b47bda82cedbc7ec/ドキュメント/arknights.xlsx", type="xlsx")
-
-df = pd.read_excel(uploaded_file)
 
 if uploaded_file:
     # エクセルデータを読み込む
@@ -78,27 +77,22 @@ if uploaded_file:
         df[col] = df[col].apply(lambda x: str(x).encode('utf-8').decode('utf-8') if pd.notnull(x) else x)
 
 
-# Streamlitアプリケーションのタイトル
-st.title('アークナイツキャラクター検索サイト')
-
-# ユーザーから名前を入力
-name = st.text_input('名前を入力してください')
-
 # 名前に対応する情報を取得して表示
-if name:
-    # 名前がExcelファイルに存在するかチェック
-    if name in df['名前'].values:
-        info = df[df['名前'] == name]  # 名前に対応する行を取得
-        st.write(f'**{name}** の情報:')
-        st.write(f"所属: {info['所属'].values[0]}")
-        st.write(f"職業: {info['職業'].values[0]}")
-        st.write(f"職分: {info['職分'].values[0]}")
-        st.write(f"レアリティ: {info['レアリティ'].values[0]}")
-        st.write(f"公開求人: {info['公開求人'].values[0]}")
-        st.write(f"素質1: {info['素質1'].values[0]}")
-        st.write(f"素質2: {info['素質2'].values[0]}")
-        st.write(f"スキル1: {info['スキル1'].values[0]}")
-        st.write(f"スキル2: {info['スキル2'].values[0]}")
-        st.write(f"スキル3: {info['スキル3'].values[0]}")
-    else:
-        st.write('その名前の情報は見つかりませんでした')
+uploaded_file = st.file_uploader("Upload an Excel file", type="xlsx")
+
+if uploaded_file:
+    # Excelデータを読み込む
+    df = pd.read_excel(uploaded_file)
+
+    # ユーザーから名前を入力
+    name = st.text_input("名前を入力してください")
+
+    # 名前に一致するデータを抽出
+    filtered_df = df[df['名前'] == name]
+
+    # 必要な列のみを選択
+    columns_to_display = ['名前', '所属', '職業', '職分', 'レアリティ', '公開求人', '素質1', '素質2', 'スキル1', 'スキル2', 'スキル3']
+    filtered_df = filtered_df[columns_to_display]
+
+    # 抽出したデータを表示
+    st.write(filtered_df)

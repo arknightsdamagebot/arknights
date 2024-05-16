@@ -10,8 +10,6 @@ st.title('アークナイツキャラクター検索サイト')
 df = pd.read_excel('arknights.xlsx',sheet_name="キャラクター一覧")
 st.write(df.head())
 
-string_cols = df.select_dtypes(include=['名前']).columns
-
 
 # 名前に対応する情報を取得して表示
 uploaded_file = st.file_uploader("Upload an Excel file", type="xlsx")

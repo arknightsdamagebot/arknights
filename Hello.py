@@ -7,8 +7,8 @@ st.title('アークナイツキャラクター検索サイト')
 
 
 # エクセルデータを読み込む
-df = pd.read_excel('arknights.xlsx',sheetname="キャラクター一覧")
-
+df = pd.read_excel('arknights.xlsx',sheet_name="キャラクター一覧")
+st.write(df.head())
 
 string_cols = df.select_dtypes(include=['名前']).columns
 

@@ -8,7 +8,6 @@ st.title('アークナイツキャラクター検索サイト')
 
 # エクセルデータを読み込む
 df = pd.read_excel('arknights.xlsx',sheet_name="キャラクター一覧")
-st.write(df.head())
 
 
 # 名前に対応する情報を取得して表示

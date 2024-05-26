@@ -10,9 +10,6 @@ st.title('アークナイツキャラクター検索サイト')
 df = pd.read_excel('arknights - 完成.xlsx',sheet_name="キャラクター一覧")
 
 
-# 名前に対応する情報を取得して表示
-uploaded_file = st.file_uploader("Upload an Excel file", type="xlsx")
-
 name = st.text_input("名前を入力してください")
 
 

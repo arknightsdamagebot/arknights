@@ -4,24 +4,31 @@ import openpyxl
 
 st.title('アークナイツオペレーター検索')
 
-@st.cache
-def load_data():
-    return pd.read_excel('arknights - 完成.xlsx', sheet_name="キャラクター一覧")
+# エクセルデータを読み込む
+df = pd.read_excel('arknights - 完成.xlsx',sheet_name="キャラクター一覧")
 
-df = load_data()
+names = df['名前'].unique().tolist()
+selected_name = st.selectbox("名前を選択してください", names)
 
 name = st.text_input("名前を入力してください")
 
-# 名前に一致するデータを抽出
-filtered_row = df[df['名前'] == name]
+filtered_df = df[df['名前'] == selected_name]
 
-# 抽出した行があるかどうかをチェック
-if not filtered_row.empty:
-    # 名前に対応する文章を取得
-    selected_text = filtered_row.iloc[0]['文章']
-    st.write(selected_text)
-else:
-    st.warning("該当する名前の文章が見つかりませんでした。")
+columns_to_display = ['名前', '所属', '職業', '職分', 'レアリティ', '公開求人', '素質1', '素質2', 'スキル1', 'スキル2', 'スキル3']
+filtered_df = filtered_df[columns_to_display]
+
+st.write(filtered_df)
+st.write("名前:"+ filtered_df['名前'])
+st.write("所属:"+ filtered_df['所属'])
+st.write("職業:"+ filtered_df['職業'])
+st.write("職分:"+ filtered_df['職分'])
+st.write("レアリティ:"+ filtered_df['レアリティ'])
+st.write("公開求人:"+ filtered_df['公開求人'])
+st.write("素質1:"+ filtered_df['素質1'])
+st.write("素質2:"+ filtered_df['素質2'])
+st.write("スキル1:"+ filtered_df['スキル1'])
+st.write("スキル2:"+ filtered_df['スキル2'])
+st.write("スキル3:"+ filtered_df['スキル3'])
 
 filtered_df = df[df['名前'] == name]
 

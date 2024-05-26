@@ -20,4 +20,4 @@ filtered_df = filtered_df[columns_to_display]
 
 # 抽出したデータを表示
 st.write(filtered_df)
-st.write(filtered_df['名前'].values[0])
+st.write(filtered_df['名前'])

@@ -18,17 +18,17 @@ columns_to_display = ['名前', '所属', '職業', '職分', 'レアリティ',
 filtered_df = filtered_df[columns_to_display]
 
 st.write(filtered_df)
-st.write("名前:"filtered_df['名前'])
-st.write("所属:"filtered_df['所属'])
-st.write("職業:"filtered_df['職業'])
-st.write("職分:"filtered_df['職分'])
-st.write("レアリティ:"filtered_df['レアリティ'])
-st.write("公開求人:"filtered_df['公開求人'])
-st.write("素質1:"filtered_df['素質1'])
-st.write("素質2:"filtered_df['素質2'])
-st.write("スキル1:"filtered_df['スキル1'])
-st.write("スキル2:"filtered_df['スキル2'])
-st.write("スキル3:"filtered_df['スキル3'])
+st.write("名前:"+ filtered_df['名前'])
+st.write("所属:"+ filtered_df['所属'])
+st.write("職業:"+ filtered_df['職業'])
+st.write("職分:"+ filtered_df['職分'])
+st.write("レアリティ:"+ filtered_df['レアリティ'])
+st.write("公開求人:"+ filtered_df['公開求人'])
+st.write("素質1:"+ filtered_df['素質1'])
+st.write("素質2:"+ filtered_df['素質2'])
+st.write("スキル1:"+ filtered_df['スキル1'])
+st.write("スキル2:"+ filtered_df['スキル2'])
+st.write("スキル3:"+ filtered_df['スキル3'])
 
 filtered_df = df[df['名前'] == name]
 

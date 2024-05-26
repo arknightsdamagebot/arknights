@@ -5,7 +5,8 @@ import openpyxl
 html_code = """
 <style>
 body {
-    background-color: #f0f0f0; /* 任意の色を指定 */
+    background-color: #000000; /* 黒色 */
+    color: #FFFFFF; /* テキスト色を白色に設定 */
 }
 </style>
 """

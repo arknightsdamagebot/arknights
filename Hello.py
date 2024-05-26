@@ -1,21 +1,36 @@
 import streamlit as st
 import pandas as pd
 import openpyxl
+import random
 
-html_code = """
-<style>
-body {
-    background-color: #000000; /* 黒色 */
-    color: #FFFFFF; /* テキスト色を白色に設定 */
-}
-</style>
-"""
+image_urls = [
+    "https://arknights.wikiru.jp/index.php?plugin=attach&refer=%E3%83%A0%E3%83%AA%E3%83%8A%E3%83%BC%E3%83%AB&openfile=mlynar_e2.png",
+    "https://arknights.wikiru.jp/attach2/E3839FE383A5E383ABE382B8E382B9_6D75656C737973655F322E706E67.png",
+    "https://arknights.wikiru.jp/attach2/E383B4E382A3E382B8E382A7E383AB_766967696C5F65706F7175652E706E67.png",
+]
 
-st.title('アークナイツキャラクター検索サイト')
+def main():
+    # Streamlitアプリケーションのタイトル
+    st.title('アークナイツオペレーター検索サイト')
+
+    # ランダムに画像を選択
+    random_image_url = random.choice(image_urls)
+
+    # CSSを使用して背景画像を設定
+    st.markdown(
+        f"""
+        <style>
+        .reportview-container {{
+            background: url("{random_image_url}") no-repeat center center fixed;
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 
 
-st.markdown(html_code, unsafe_allow_html=True)
 
 # エクセルデータを読み込む
 df = pd.read_excel('arknights - 完成.xlsx',sheet_name="キャラクター一覧")

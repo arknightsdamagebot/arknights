@@ -7,7 +7,7 @@ st.title('アークナイツキャラクター検索サイト')
 
 
 # エクセルデータを読み込む
-df = pd.read_excel('arknights - コピー.xlsx',sheet_name="キャラクター一覧")
+df = pd.read_excel('arknights - 完成.xlsx',sheet_name="キャラクター一覧")
 
 
 # 名前に対応する情報を取得して表示

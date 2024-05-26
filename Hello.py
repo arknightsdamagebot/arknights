@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import openpyxl
 
-st.title('アークナイツオペレーター検索サイト')
+st.title('アークナイツオペレーター検索')
 
 # エクセルデータを読み込む
 df = pd.read_excel('arknights - 完成.xlsx',sheet_name="キャラクター一覧")

@@ -2,9 +2,19 @@ import streamlit as st
 import pandas as pd
 import openpyxl
 
+html_code = """
+<style>
+body {
+    background-color: #f0f0f0; /* 任意の色を指定 */
+}
+</style>
+"""
+
 st.title('アークナイツキャラクター検索サイト')
 
 
+
+st.markdown(html_code, unsafe_allow_html=True)
 
 # エクセルデータを読み込む
 df = pd.read_excel('arknights - 完成.xlsx',sheet_name="キャラクター一覧")

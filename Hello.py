@@ -12,8 +12,8 @@ selected_name = st.selectbox("名前を選択してください", names)
 
 name = st.text_input("名前を入力してください")
 
+filtered_df = df[df['名前'] == selected_name]
 
-# 名前に一致するデータを抽出
 filtered_df = df[df['名前'] == name]
 
 # 必要な列のみを選択

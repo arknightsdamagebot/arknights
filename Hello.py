@@ -7,6 +7,8 @@ st.title('アークナイツオペレーター検索')
 # エクセルデータを読み込む
 df = pd.read_excel('arknights - 完成.xlsx',sheet_name="キャラクター一覧")
 
+names = df['名前'].unique().tolist()
+selected_name = st.selectbox("名前を選択してください", names)
 
 name = st.text_input("名前を入力してください")
 
@@ -20,4 +22,4 @@ filtered_df = filtered_df[columns_to_display]
 
 # 抽出したデータを表示
 st.write(filtered_df)
-st.write(filtered_df['名前'])
+st.write(filtered_df['名前'].values[0])

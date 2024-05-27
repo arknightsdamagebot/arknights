@@ -47,3 +47,5 @@ st.write("素質2:"+ filtered_df['素質2'].values[0])
 st.write("スキル1:"+ filtered_df['スキル1'].values[0])
 st.write("スキル2:"+ filtered_df['スキル2'].values[0])
 st.write("スキル3:"+ filtered_df['スキル3'].values[0])
+if not text_input.strip():
+    st.error("Please enter some text.")

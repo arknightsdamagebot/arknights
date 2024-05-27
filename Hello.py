@@ -36,7 +36,7 @@ columns_to_display = ['名前', '所属', '職業', '職分', 'レアリティ',
 filtered_df = filtered_df[columns_to_display]
 
 if not name.strip():
-    st.error("Please enter some text.")
+    st.error("オペレーターの名前を入力してください")
 else :
     st.write(filtered_df)
     st.write("名前:"+ filtered_df['名前'].values[0])

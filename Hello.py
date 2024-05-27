@@ -35,6 +35,9 @@ filtered_df = df[df['名前'] == name]
 columns_to_display = ['名前', '所属', '職業', '職分', 'レアリティ', '公開求人', '素質1', '素質2', 'スキル1', 'スキル2', 'スキル3']
 filtered_df = filtered_df[columns_to_display]
 
+if not text_input.strip():
+    st.error("Please enter some text.")
+else :
 st.write(filtered_df)
 st.write("名前:"+ filtered_df['名前'].values[0])
 st.write("所属:"+ filtered_df['所属'].values[0])
@@ -47,5 +50,4 @@ st.write("素質2:"+ filtered_df['素質2'].values[0])
 st.write("スキル1:"+ filtered_df['スキル1'].values[0])
 st.write("スキル2:"+ filtered_df['スキル2'].values[0])
 st.write("スキル3:"+ filtered_df['スキル3'].values[0])
-if not text_input.strip():
-    st.error("Please enter some text.")
+

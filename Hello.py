@@ -37,7 +37,7 @@ filtered_df = filtered_df[columns_to_display]
 
 if not name.strip():
     st.error("オペレーターの名前を入力してください")
-elif df['名前'] != name:
+elif filtered_df.empty:
     st.error("該当する情報がありません")
 else :
     st.write(filtered_df)

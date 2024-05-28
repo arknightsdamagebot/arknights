@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import openpyxl
 
-background_image_url = 'https://aipict.com/wp-content/uploads/2022/09/beach01.png'
+background_image_url = 'https://thumb.ac-illust.com/b1/b1f70b6302cfc92dd573875e157b3bf4_w.jpeg'
 
 # ページ全体の背景に画像を設定する
 st.markdown(

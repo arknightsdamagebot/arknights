@@ -2,21 +2,6 @@ import streamlit as st
 import pandas as pd
 import openpyxl
 
-background_image_url = 'https://thumb.ac-illust.com/b1/b1f70b6302cfc92dd573875e157b3bf4_w.jpeg'
-
-# ページ全体の背景に画像を設定する
-st.markdown(
-    f"""
-    <style>
-    .reportview-container {{
-        background: url('{background_image_url}');
-        background-size: cover;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 st.title('アークナイツオペレーター検索')
 
 df = pd.read_excel('arknights - 完成.xlsx',sheet_name="キャラクター一覧")

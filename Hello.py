@@ -2,6 +2,17 @@ import streamlit as st
 import pandas as pd
 import openpyxl
 
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://arknights.wikiru.jp/attach2/E383A0E383AAE3838AE383BCE383AB_6D6C796E61725F65322E706E67.png");
+    }
+   </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title('アークナイツオペレーター検索')
 
 # エクセルデータを読み込む

@@ -31,3 +31,15 @@ if not filtered_df.empty:
         st.write(f"{column}: {filtered_df[column].values[0]}")
 else:
     st.write("選択された名前に一致するデータがありません。")
+
+    def main():
+    st.title("画像表示アプリ")
+    
+    # 画像ファイルのパス
+    image_path = "https://arknights.wikiru.jp/attach2/417368_E382A2E38383E382B7E383A52E706E67.png"  # 画像ファイルのパスを指定してください
+    
+    # 画像を表示
+    st.image(image_path, caption="事前に準備した画像", use_column_width=True)
+
+if __name__ == "__main__":
+    main()

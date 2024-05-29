@@ -31,5 +31,3 @@ if not filtered_df.empty:
         st.write(f"{column}: {filtered_df[column].values[0]}")
 else:
     st.write("選択された名前に一致するデータがありません。")
-
-    

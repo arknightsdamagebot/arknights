@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-impor random
+import random
  
 background_images = [
     'https://arknights.wikiru.jp/attach2/E3839FE383A5E383ABE382B8E382B9_6D75656C737973655F322E706E67.png',

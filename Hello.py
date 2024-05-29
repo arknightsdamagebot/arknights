@@ -1,28 +1,6 @@
 import streamlit as st
 import pandas as pd
 import random
- 
-background_images = [
-    'https://arknights.wikiru.jp/attach2/E3839FE383A5E383ABE382B8E382B9_6D75656C737973655F322E706E67.png',
-    'https://arknights.wikiru.jp/attach2/E382B7E383ABE38390E383BCE382A2E38383E382B7E383A5_E382B7E383ABE38390E383BCE382A2E38383E382B7E383A52E706E67.png',
-    'https://arknights.wikiru.jp/attach2/E38381E383A7E383B3E383A6E382A8_43686F6E677975655F456C6974655F322E6A7067.jpg',
-]
-
-# ランダムに画像を選択
-selected_image = random.choice(background_images)
-
-# CSSを使って背景画像を設定
-page_bg_img = f"""
-<style>
-body {{
-    background-image: url("{selected_image}");
-    background-size: cover;
-}}
-</style>
-"""
-
-# CSSをStreamlitに適用
-st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title('アークナイツオペレーター検索')
  

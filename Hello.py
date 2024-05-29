@@ -4,7 +4,7 @@ import random
 
 st.title('アークナイツオペレーター検索')
  
-df = pd.read_excel('arknights - 完成.xlsx', sheet_name="キャラクター一覧")
+df = pd.read_excel('arknights - 完成 (1).xlsx', sheet_name="キャラクター一覧")
  
 names = df['名前'].unique().tolist()
 selected_name = st.selectbox("名前を選択してください", names)

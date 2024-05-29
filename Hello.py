@@ -37,6 +37,3 @@ else:
     
     # 画像を表示
     st.image(image_path, caption="事前に準備した画像", use_column_width=True)
-
-if __name__ == "__main__":
-    main()

@@ -9,11 +9,7 @@ df = pd.read_excel('arknights - 完成 (2).xlsx', sheet_name="キャラクター
 names = df['名前'].unique().tolist()
 selected_name = st.selectbox("名前を選択してください", names)
  
-name = st.text_input("名前を入力してください")
- 
-if name:
-    filtered_df = df[df['名前'] == name]
-elif selected_name:
+if selected_name:
     filtered_df = df[df['名前'] == selected_name]
 else:
     filtered_df = pd.DataFrame()

@@ -1,6 +1,10 @@
 import streamlit as st
 import pandas as pd
 import random
+from PIL import Image
+
+image = Image.open('correlation.png')
+st.image(image)
 
 st.title('アークナイツオペレーター検索')
  

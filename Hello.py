@@ -24,5 +24,5 @@ if not filtered_df.empty:
 else:
     st.write("名前に一致するデータがありません。")
 
-image = Image.open('{selected_name}.png')
+image = Image.open('df['名前].png')
 st.image(image)

@@ -24,5 +24,18 @@ if not filtered_df.empty:
 else:
     st.write("名前に一致するデータがありません。")
 
-image = Image.open('df['名前].png')
-st.image(image)
+if not filtered_df.empty:
+    st.write(filtered_df)
+
+    for column in columns_to_display:
+        st.write(f"{column}: {filtered_df[column].values[0]}")
+
+    # 画像の表示
+    image_path = f"{selected_name}.png"  # 画像のファイルパス
+    try:
+        image = Image.open(image_path)
+        st.image(image, caption=f"{selected_name}の画像")
+    except FileNotFoundError:
+        st.write("画像が見つかりませんでした。")
+else:
+    st.write("名前に一致するデータがありません。")

@@ -15,15 +15,6 @@ columns_to_display = [
     '公開求人', '素質1', '素質2', 'スキル1', 'スキル2', 'スキル3'
 ]
 filtered_df = filtered_df[columns_to_display]
- 
-if not filtered_df.empty:
-    st.write(filtered_df)
- 
-    for column in columns_to_display:
-        st.write(f"{column}: {filtered_df[column].values[0]}")
-else:
-    st.write("名前に一致するデータがありません。")
-
 if not filtered_df.empty:
     st.write(filtered_df)
 

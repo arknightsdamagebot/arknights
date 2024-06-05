@@ -3,7 +3,7 @@ import pandas as pd
 import random
 from PIL import Image
 
-image = Image.open('correlation.png')
+image = Image.open('U-Official.png')
 st.image(image)
 
 st.title('アークナイツオペレーター検索')

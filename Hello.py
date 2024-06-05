@@ -24,7 +24,7 @@ if not filtered_df.empty:
     image_path = f"{selected_name}.png"  # 画像のファイルパス
     try:
         image = Image.open(image_path)
-        st.image(image_path, caption='Example Image', width=500)
+        st.image(image_path, caption='Example Image', width=350)
     except FileNotFoundError:
         st.write("画像が見つかりませんでした。")
 else:

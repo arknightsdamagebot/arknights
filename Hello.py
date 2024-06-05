@@ -3,9 +3,6 @@ import pandas as pd
 import random
 from PIL import Image
 
-image = Image.open('U-Official.png')
-st.image(image)
-
 st.title('アークナイツオペレーター検索')
  
 df = pd.read_excel('arknights - 完成 (1).xlsx', sheet_name="キャラクター一覧")
@@ -26,3 +23,6 @@ if not filtered_df.empty:
         st.write(f"{column}: {filtered_df[column].values[0]}")
 else:
     st.write("名前に一致するデータがありません。")
+
+image = Image.open('{selected_name}.png')
+st.image(image)

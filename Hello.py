@@ -15,9 +15,7 @@ selected_name = st.selectbox("名前を選択してください", names)
 selected_syozoku = st.selectbox("所属を選択してください", syozokus)
 selected_syokubun = st.selectbox("職分を選択してください", syokubuns)
 
-filtered_df = df[(df['名前'] == selected_name) &
-                 (df['所属'] == selected_syozoku) &
-                 (df['職分'] == selected_syokubun)]
+filtered_df = df[(df['名前'] == selected_name)]
 
 columns_to_display = [
     '名前', '所属', '職業', '職分', 'レアリティ',

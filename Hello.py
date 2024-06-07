@@ -24,7 +24,7 @@ if not filtered_df.empty:
     for column in columns_to_display:
         st.write(f"{column}: {filtered_df[column].values[0]}")
 
-    selected_image_path = f"{selected_name}.png"  # 画像のファイルパス
+    selected_image_path = f"{selected_name}.png"
     try:
         image = Image.open(selected_image_path)
         st.image(selected_image_path, caption=f'{selected_name}', width=350)

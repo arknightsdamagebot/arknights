@@ -20,7 +20,7 @@ filtered_df = df[(df['所属'] == selected_affiliation)]
 characters_in_affiliation = filtered_df['名前'].unique().tolist()
 
 # ユーザーがキャラクターを選択
-selected_character = st.selectbox("キャラクターを選択してください", characters_in_affiliation)
+selected_character = st.selectbox("オペレーターを選択してください", characters_in_affiliation)
 
 # 選択されたキャラクターの情報を表示
 selected_character_info = filtered_df[filtered_df['名前'] == selected_character]

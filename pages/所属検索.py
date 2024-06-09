@@ -5,7 +5,7 @@ from PIL import Image
 
 st.title('所属検索')
 
-df = pd.read_excel('arknights - 完成 (3).xlsx', sheet_name="キャラクター一覧")
+df = pd.read_excel('arknights - 完成 (4).xlsx', sheet_name="キャラクター一覧")
 
 # キャラクターの所属を一意にリストアップ
 affiliations = df['所属'].unique().tolist()

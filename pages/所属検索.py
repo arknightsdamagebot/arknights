@@ -27,7 +27,7 @@ selected_character_info = filtered_df[filtered_df['名前'] == selected_characte
 
 columns_to_display = [
     '名前', '所属', '職業', '職分', 'レアリティ',
-    '公開求人', '素質1', '素質2', 'スキル1', 'スキル2', 'スキル3'
+    '公開求人', '素質1', '素質2', 'スキル1', 'スキル2', 'スキル3', 'モジュールX', 'モジュールY', 'モジュールΔ'
 ]
 
 if not selected_character_info.empty:

@@ -5,7 +5,7 @@ from PIL import Image
 
 st.title('名前検索')
 
-df = pd.read_excel('arknights - 完成(4).xlsx', sheet_name="キャラクター一覧")
+df = pd.read_excel('arknights - 完成.xlsx', sheet_name="キャラクター一覧")
 
 names = df['名前'].unique().tolist()
 

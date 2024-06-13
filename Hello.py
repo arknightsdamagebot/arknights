@@ -1,16 +1,4 @@
 import streamlit as st
-import os
-
-# 現在のファイル名を指定します
-current_file_name = "Hello.py"
-# 新しいファイル名を指定します
-new_file_name = "main.py"
-
-# ファイル名を変更します
-os.rename(current_file_name, new_file_name)
-
-print("ファイル名が変更されました。")
-
 
 st.set_page_config(page_title="アークナイツオペレーター検索", layout="wide")
 
